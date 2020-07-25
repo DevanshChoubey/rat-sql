@@ -76,6 +76,7 @@ class EncDecModel(torch.nn.Module):
         enc_states = self.encoder([enc_input for enc_input, dec_output in batch])
 
         for enc_state, (enc_input, dec_output) in zip(enc_states, batch):
+            if dec_output.tree == None: continue
             loss = self.decoder.compute_loss(enc_input, dec_output, enc_state, debug)
             losses.append(loss)
         if debug:
