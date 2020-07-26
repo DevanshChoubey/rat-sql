@@ -1,5 +1,5 @@
 {
-    logdir: "logdir/bert_run",
+    logdir: "/content/drive/My Drive/logdir/bs=6,lr=7.4e-04,bert_lr=3.0e-06,end_lr=0e0,att=1",
     model_config: "configs/spider/nl2code-bert.jsonnet",
     model_config_args: {
         data_path: 'data/spider/',
